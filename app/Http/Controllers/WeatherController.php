@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Services\WeatherService;
-use Illuminate\Http\Request;
 
 class WeatherController extends Controller
 {
@@ -14,16 +13,8 @@ class WeatherController extends Controller
         $this->weatherService = $weatherService;
     }
 
-    public function show(Request $request)
+    public function show($city)
     {
-        $request->validate([
-            'city' => 'required|string',
-        ]);
-
-        $city = $request->input('city');
-        $weatherData = $this->weatherService->getWeather($city);
-
-        return response()->json($weatherData);
+        return $this->weatherService->getWeather($city);
     }
-    
 }
