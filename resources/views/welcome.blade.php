@@ -50,18 +50,18 @@
 
 <div class="container d-flex justify-content-center">
     <div class="weather-card col-md-6 col-sm-12">
-        <h3 class="text-center">Weather Forecast</h3>
+        <h3 class="text-center">Previsão do tempo</h3>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" id="cityInput" placeholder="Enter city name">
-            <button class="btn btn-search" id="searchBtn">Search</button>
+            <input type="text" class="form-control" id="cityInput" placeholder="Coloque o nome de uma cidade">
+            <button class="btn btn-search" id="searchBtn">Buscar</button>
         </div>
         <div class="text-center">
             <i id="weatherIcon" class="fas fa-cloud-sun weather-icon"></i>
             <div class="temperature" id="temperature">--°C</div>
             <div class="description" id="description">--</div>
             <div class="mt-3">
-                <p id="humidity">Humidity: --%</p>
-                <p id="windSpeed">Wind Speed: -- km/h</p>
+                <p id="humidity">Umidade: --%</p>
+                <p id="windSpeed">Velocidade do Vento: -- km/h</p>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@
         const city = document.getElementById('cityInput').value;
 
         if (!city) {
-            alert('Please enter a city name.');
+            alert('Por favor, coloque o nome de uma cidade.');
             return;
         }
 
@@ -84,15 +84,15 @@
                 } else {
                     document.getElementById('temperature').textContent = `${data.main.temp}°C`;
                     document.getElementById('description').textContent = data.weather[0].description;
-                    document.getElementById('humidity').textContent = `Humidity: ${data.main.humidity}%`;
-                    document.getElementById('windSpeed').textContent = `Wind Speed: ${data.wind.speed} km/h`;
+                    document.getElementById('humidity').textContent = `Humidade: ${data.main.humidity}%`;
+                    document.getElementById('windSpeed').textContent = `Velocidade do Vento: ${data.wind.speed} km/h`;
 
                     const iconCode = data.weather[0].icon;
                     document.getElementById('weatherIcon').className = `fas weather-icon`;
                     document.getElementById('weatherIcon').style.backgroundImage = `url(http://openweathermap.org/img/wn/${iconCode}@2x.png)`;
                 }
             })
-            .catch(error => alert('City not found'));
+            .catch(error => alert('Cidade Não Encontrada'));
     });
 </script>
 
