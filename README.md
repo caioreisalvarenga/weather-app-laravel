@@ -7,28 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Sobre o projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Esse projeto foi construído usando Laravel, Bootstrap, e JS para fazermos algumas validações e para fazermos a integração do Front com o Back, onde que consiste em uma aplicação de previsão do tempo, onde foi separada em branchs para fazer o controle de versionamento de código, usando a camada service para ter mais uma camada de segurança na aplicação, consumindo a API pública do Open Weather, ele faz a busca na API e salva no banco de dados logo em seguida, usando o método updateOrCreate, ele previne que seja salva a consulta 2 vezes no banco da dados, mas, ao mesmo tempo permite a consulta do mesmo, para executar o projeto:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Clone o projeto.
+- Configure o seu env para o banco de dados que você está usando aí(no meu caso eu usei o PostgreSQL).
+- Rode composer install para instalar as dependências do Laravel.
+- Rode php artisan migrate para atualizar as tabelas no teu banco de dados.
+- Entre na API Open Weather para pegar uma chave da API Publica(no projeto a variável de ambiente no env da API é OPENWEATHER_API_KEY).
+- Rode o comando php artisan serve pra ver o projeto funcionando(VUALÁ).
+- Seja feliz e faça quantas buscas você quiser.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Observação
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Muito obrigado pela oportunidade de participar desse processo seletivo e de fazer esse teste, espero que em breve possamos estar resolvendo muitos desafios juntos, novamente, desde já, agradeço, aguardo um feedback.
