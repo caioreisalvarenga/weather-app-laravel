@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use Illuminate\Support\Facades\Http;
 use App\Models\WeatherData;
+use Illuminate\Support\Facades\Http;
 
 class WeatherService
 {
